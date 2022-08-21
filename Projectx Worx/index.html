@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <style>
+        #submit{
+            background-color: rgb(34, 0, 128);
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="submitForm()">
+        <label for="name">Enter your name</label><br>
+        <input type="text" placeholder="Enter your Name" id="fname" required maxlength="8"><br><br>
+        <label for="email">e-mail:</label><br>
+           <input type="email" placeholder="Enter your email" id="email" name="email" required></br></br>
+           <label for="number"> Mob. Number:</label></br>
+           <input type="text" placeholder="Enter Your Mob. Number" id="number" name="number" maxlength="10" required></br></br>
+        <label for="gender">Select Your Gender </label><br>
+        <input type="checkbox" name="check" value="male" onclick="onlyOne(this)">
+        <label>Male</label><br>
+        <input type="checkbox" name="check" value="female" onclick="onlyOne(this)">
+        <label>Female</label><br>
+<select id="city" name="city">
+    <option value="">Select City</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Pune">Pune</option>
+    <option value="Ahmadnagar">Ahmadnagar</option>
+    <option value="Allahabad">Allahabad</option>
+    <option value="Ahmadabad">Ahmadabad</option>
+</select><br><br>
+        <button type="submit" id="submit" onsubmit="submitForm()">Submit</button>
+    </form>
+    <script>
+        function submitForm(){
+            var name=document.getElementById('name').value;
+            var email=document.getElementById('email').value;
+            var number=document.getElementById('number').value;
+    
+            var check;
+            var checkboxs=document.getElementsByName('check')
+            checkboxs.forEach((item)=>{
+                if(item.checked==true) check=item.value;
+            })
+    
+            alert(" \nYour name is"+name +" \nYour Email is "+email+".\nYour gender is "+check+" \n Your Number is "+Number+" \n Your City is "+city);
+        }
+        function onlyOne(checkbox){
+            var checkboxs=document.getElementsByName('check')
+            checkboxs.forEach((item)=>{
+                if(item!==checkbox) item.checked = false
+            })
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+const myArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [[10, 11, 12], 13, 14],
+];
+
+const myData = myArray[2][1];
+console.log(myData);
+
+//function testLogicalOr(val) {
+  // Only change code below this line
+
+
+
+//Combine the two if statements into one statement which returns the string Outside if val is not between 10 and 20, inclusive. Otherwise, return the string Inside.
+
+  if (val<10||val>20) {
+    return "Outside";
+  }
+
+  //if (val) {
+    return "Inside";
+  //}
+
+  // Only change code above this line
+ // return "Inside";
+}
+
+console.log(testLogicalOr(9));

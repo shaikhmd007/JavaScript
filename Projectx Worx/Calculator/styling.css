@@ -1,0 +1,22 @@
+body{
+  height: 100vh;
+}
+.parent{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.center{
+    background-color: azure;
+    width: 50%;
+    height: 200px;
+}
+#btn:hover{
+    transition:ease;
+    border-radius:2px;
+    border: none;
+    background-color: blue;
+    color: aqua;
+}
